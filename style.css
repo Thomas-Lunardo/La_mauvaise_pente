@@ -1,0 +1,636 @@
+/*************** C S S  V A R I A B L E S ****************/
+
+:root{
+    --main-font-color: whitesmoke;
+    --h1-font-color: firebrick;
+    --h1-letter-spacing: 0.8ch;
+    --red-background-color: rgba(68, 14, 14, 0.486);
+    --red-dark-background-color: rgba(59, 0, 0, 0.404);
+    --red-darker-background-color: rgba(24, 0, 0, 0.11);
+    --gray-background-color: rgb(99, 99, 99);
+    --test-background-color: purple;
+    --main-font: google-font-1; 
+    --main-box-shadow: 0 5px 50px rgba(139, 0, 0, 0.082);
+}
+
+/*********** G O O G L E  F O N T *************/
+
+@font-face {
+    font-family: google-font-1;
+    src: url(./assets/RocknRollOne-Regular.ttf);
+}
+
+/**************** A L L  &  B O D Y ************************/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: google-font-1;
+    color: var(--main-font-color);
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+
+body {
+    background-color: rgb(10, 10, 10);
+
+}
+
+/******************** H E A D E R ************************/
+
+header img {
+    height: 150px;
+    margin: 30px auto 50px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+header img:hover{
+    transform: scale(1.05);
+    }
+
+/******************** N A V  B A R R E *******************/
+nav {
+    width: 100%;
+    background-color: var(--darker-backgound-color);
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: var(--main-box-shadow);
+}
+
+nav ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 0.1mm rgba(178, 34, 34, 0.479);
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+
+
+/********* M E D I A  Q U E R Y  H E A D E R *************/
+
+@media screen and (min-width: 414px){
+    header img {
+        display: block;
+        border: solid 0.1mm var(--red-dark-background-color);
+        border-radius: 5px;
+        box-shadow: var(--main-box-shadow);
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li{
+        margin: 25px auto;
+        border: none;
+    }
+
+    .head ul li a {
+        font-size: large;
+        transition: color .3s;
+        transition: transform 0.5s;
+      }
+
+      nav ul li a:hover, .head ul li a.active {
+        color: var(--h1-font-color);
+        transform: scale(1.15);  
+      }
+
+   
+    .link-external{
+        color: var(--h1-font-color); 
+    }
+}
+
+/******************** I N D E X *************************/
+
+/******************** SECTION  CONCERT *************/
+
+.show{
+    text-align: center;
+}
+
+.show h1{
+    color: var(--h1-font-color);
+    letter-spacing: var(--h1-letter-spacing);
+    margin: 60px 0 60px 0;
+}
+
+/* Activate in case of img on index
+   .show img{
+    width: 600px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: solid rgb(214, 201, 201);
+    } */
+
+.show table{
+    color: var(--main-font-color);
+    background-color: var(--red-dark-background-color);
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: var(--main-box-shadow);
+    margin: 50px auto 80px;
+}
+
+.show table th, td{
+    padding: 15px 25px;
+}
+
+.show table th{
+    letter-spacing: 0.4ch;
+}
+
+.show table tr:nth-child(2n){
+    background-color: var(--red-background-color);
+}
+
+/*************** V I D E O  S E C T I O N ****************/
+
+.video h2{
+    color: var(--main-font-color);
+    text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+}
+
+.video iframe{
+    display: block;
+    margin: 2%;
+    width: 95%;
+    height: 315px;
+}
+/************ M E D I A  Q U E R Y - I N D E X **************/
+
+@media screen and (min-width: 414px){
+    .show img{
+        width: 95%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        }
+
+    .show table{
+            width: 90%;
+        }
+
+    .video iframe{
+        display: block;
+        margin: auto;
+        width: 560px;
+        height: 315px;
+     }
+    }
+
+    /******** B I O G R A P H I E ***********/
+
+.biography{
+    color: var(--primary-font-color);
+}
+
+.biography h1{
+    color: var(--h1-font-color);
+    letter-spacing: var(--h1-letter-spacing);
+    margin: 40px auto 25px;
+    text-align: center;
+}
+
+.biography p{
+    margin: 5px auto;
+        }
+
+.biography .bio-longue p{
+    margin-bottom: 8px;
+    line-height: 1,6em;
+}
+
+.musicians{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.musicians .zikos{
+    margin: 5px 0;
+    height: auto;
+}
+
+.musicians .zikos img{
+    width: 100px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+.musicians .zikos p{
+    text-align: center;
+    width: 150px;
+}
+
+/******** M E D I A  Q U E R Y -  B I O G R A P H I E *****/
+
+@media screen and (min-width: 680px){
+    .biography{
+        margin-left: 22px;
+        padding: 0;
+    }
+
+    .biography h1{
+        margin-top: 54px;
+        margin-bottom: 30px;
+    }
+
+    .biography p{
+        margin: 10px 60px 10px;
+        padding: 10px 20px;
+        line-height: 1,6em;
+    }
+
+    .musicians {
+        flex-direction: row;
+    }
+
+    .musicians .zikos{
+        width: 250px;
+        height: 330px;
+        background-color: var(--red-darker-background-color);
+        border-radius: 5px; 
+    }
+}
+
+/****************** B L O G *********************/
+
+.blog{
+    font-weight: 500;
+}
+
+/******* BLOG - MAIN ***************/
+main {
+    float: left;
+    width: calc(100% - 300px);
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+article{
+    background-color: var(--red-darker-background-color);
+    overflow: hidden;
+    width: 90%;
+    margin: 50px auto;
+    padding: 15px 40px;
+    border-radius: 3px;
+    position: relative;
+ }
+ 
+ .article-date{
+     color: whitesmoke;
+     font-weight: 300;
+     margin-top: 20px;
+     margin-bottom: 15px;
+ }
+ 
+ article h2{
+     color: whitesmoke;
+     font-size: 2,25rem;
+     text-align: left;
+     margin-top: 5px;
+     margin-bottom: 30px;
+ }
+
+ .chapo{
+    color: whitesmoke;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+ 
+ article p{
+     color: whitesmoke;
+     line-height: 1.5em;
+ }
+
+ .video-title{
+    color: whitesmoke;
+    padding: 0;
+    margin: 19px auto 25px auto;
+    width: 75%;
+     }
+
+ .article-video{
+    display: block;
+    padding: 0;
+    width: 480px;
+    margin: 19px auto 25px auto;
+ }
+
+ article .photo-blog{
+    float: left;
+    margin-right: 25px;
+    width: 250px;
+    border-radius: 3px;
+    transition: transform 2s;
+ }
+
+ article .photo-blog img{
+    width: 100%;
+    height: auto;
+ }
+
+ article img:hover{
+    transform: scale(1.55) translate(+50%);;
+    }
+ 
+/*********** BLOG - SIDEBAR *********/
+
+.sidebar{
+    background-color: var(--darker-backgound-color);
+    position: relative;
+    float: right;
+    width: 300px;
+    padding: 40px;
+    font-size: 17px;
+    z-index: 1;
+}
+
+.sidebar h4{
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+
+.sidebar ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar li{
+    padding: 6px 0;
+}
+
+.sidebar ul li a.active{
+    color: var(--main-font-color);
+}
+
+.sidebar li:first-child{
+    padding-top: 0;
+}
+
+.sidebar a:hover{
+    text-decoration: underline;
+}
+
+.sidebar hr {
+    border: none;
+    height: 1px;
+    margin: 50px 0;
+    width: 79%;
+}
+
+.sidebar-title:first-child{
+    margin-top: 0;
+}
+
+/********* M E D I A  Q U E R Y - B L O G **********/
+
+@media screen and (max-width: 680px){
+    .blog{
+        padding: 0;
+        display: block;
+    }
+    .main{
+        width: 100%;
+    }
+    .main .container{
+        overflow: hidden;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .container {
+        padding: 0 20px;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .article{
+        margin-left: 22px;
+        padding: 0;
+    }
+
+    .video-title{
+        margin: 40px auto 25px;
+        text-align:center;
+        font-size: medium;
+    }
+
+    .article-video{
+        display: block;
+        width: 100%;
+    }
+
+    .article img{
+        float: none;
+        width: 100%;
+    }
+
+    .article p{
+        display: block;
+        width: 100%;
+    }
+}
+
+/************ O L D - S H O W S *************/
+
+.old-shows{
+    width: 100%;
+    color: var(--main-font-color);
+}
+
+.old-shows h1, h2, h3{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5ch;
+}
+
+.old-shows iframe{
+    width: 560px;
+    height: 315px;
+    display: block;
+    margin: auto;
+}
+
+.table-old-shows{
+    text-align: center;
+    background-color: #24010138;
+    border-collapse: collapse;
+    min-width: 400px;
+    width: 80%;
+    box-shadow: 0 5px 50px rgba(61, 5, 5, 0.082);
+    margin: 50px auto 80px;
+}
+
+.table-old-shows th, td{
+    padding: 15px 25px;
+}
+
+.table-old-shows th{
+    letter-spacing: 0.4ch;
+}
+.table-old-shows tr:nth-child(2n){
+    background-color: rgba(68, 14, 14, 0.486);
+}
+
+/* Media query */
+        @media screen and (max-width: 680px){
+            .old-shows h1, h2, h3{
+                width: 100%;
+            }
+    #old-shows iframe{
+        display: block;
+        width: 95%;
+    }
+    .table-old-shows{
+        width: 99%;
+    }
+}
+
+/************** M A Q U E T T E  P A G E **************/
+
+.maquette{
+    color: var(--main-font-color);
+    margin: 40px 50px 40px;
+    text-align: center;
+}
+
+.maquette h2{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.player{
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+    color: var(--main-font-color);
+}
+
+/************* C O N T A C T *****************/
+
+.contact{
+    color: var(--main-font-color);
+    text-align: center;
+}
+
+.contact h2{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.contact p{
+    margin-bottom: 30px;
+}
+
+form{
+    background-color: var(--red-dark-background-color);
+    margin: 25px auto;
+    width: 300px;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.séparation{
+    width: 35%;
+    height: 1px;
+    background-color: var(--red-background-color);
+    margin: 40px auto;
+}
+
+label{
+    line-height: 2;
+}
+    
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 5px;
+    margin: 5px auto 10px;
+    resize: none;
+    outline-color: rgb(99, 99, 99);
+    border-radius: 5px;
+}
+
+form i{
+    padding-right: 8px;
+}
+    
+button {
+    background: rgb(94, 26, 26);
+    color: var(--main-font-color);
+    border: none;
+    padding: 10px 40px;
+    margin: 10px auto;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:hover{
+transform: scale(1.05);
+}
+
+  /*************** F O O T E R *******************/
+
+footer {
+    clear: both;
+    background-color: var(--red-darker-background-color);
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px auto 30px;
+}
+
+footer ul li a {
+    color: var(--test-background-color);
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+footer ul li a:hover {
+    transform: scale(1.15);
+    color: var(--test-background-color);
+    }

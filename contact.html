@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>La Mauvaise Pente - Contact</title>
+      <link href="style.css" rel="stylesheet">
+      <link rel="icon" href="Images/logo-rock.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+  <body>
+    <header class="head">
+        <a href="index.html">
+        <img src="Images/LMP-bretelles.png" alt="logo la mauvaise pente" class="logo"></a>
+        <nav>
+        <ul>
+          <li><a href="biographie.html">BIOGRAPHIE</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="anciensconcerts.html">ANCIENS CONCERTS</a></li>
+          <li><a href="maquette.html">MAQUETTE</a></li>
+          <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Formulaire de contact</h2>
+        <p>(ce formulaire ne fonctionne pas, c'est pour la frime.
+          Envoyer un mail <a href="mailto:lamauvaisepente@gmail.com" class="link-external">via ce lien</a>, nous vous répondrons au plus vite)</p>
+<div class="séparation">
+</div>
+<p style="color: red;" id="erreur"</p>
+        <form id="formulaire">
+          <i class="fa-solid fa-user"></i>
+          <label for="name">Nom :</label><br>
+          <input type="text" id="name" name="name" placeholder="Lemmy Kilmister"/>
+          <i class="fa-solid fa-envelope"></i>
+          <label for="email">E-mail :</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="rock.franc@disto.bat"/>
+          <label for="message">Message :</label>
+          <textarea cols="30" rows="10" id="message" name="message"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+
+    <footer class="foot">
+      <ul>
+        <li><a href="https://www.facebook.com/lamauvaisepente" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/lamauvaisepente/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCyp3o2C7mM-NnyhYzTsX8aA" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      </ul>
+    </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
