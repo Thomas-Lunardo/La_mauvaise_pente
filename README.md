@@ -1,2 +1,2 @@
 # La_mauvaise_pente
-Web site form my rock band.
+Web site of my rock band.
